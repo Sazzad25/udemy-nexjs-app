@@ -1,20 +1,11 @@
-
-// import styles from '@/styles/Home.module.css'
-
-import Link from "next/link";
+import EventList from "@/components/events/EventList";
+import { getFeaturedEvents } from "@/dummy-data";
 
 function Home() {
+  const featuredEvents = getFeaturedEvents();
   return (
     <div>
-      <h1>The Home Page</h1>
-      <ul>
-        <li>
-          <Link href='/portfolio'>Portfolio</Link>
-        </li>
-        <li>
-          <Link href='/clients'>Client</Link>
-        </li>
-      </ul>
+      <EventList items={featuredEvents} />
     </div>
   )
 }
